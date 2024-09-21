@@ -21,7 +21,7 @@ window.onscroll = () => {
         if(top >= offset && top < offset+height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[href=' + id + ']').classList.add('active');
+                document.querySelector('header nav a[href="#' + id + '"]').classList.add('active');
 
             })
 
@@ -32,7 +32,7 @@ window.onscroll = () => {
 
     /*==================== sticky navbar ====================*/
     let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.screenY > 100);
+    header.classList.toggle('sticky', window.scrollY > 100);
 
     /*==================== remove toggle icon and navbar when click navbar link (scroll) ====================*/
     menuIcon.classList.remove('bx-x');
@@ -60,7 +60,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 /*==================== typed js ====================*/
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Software Engineer', 'Game Designer'],
+    strings: ['Software Engineer', 'Fullstack Developer', 'Game Designer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -69,68 +69,14 @@ const typed = new Typed('.multiple-text', {
 
 /*==================== contact me ====================*/
 
-document.getElementById('contact').addEventListener('submit', function(event) {
-    event.preventDefault();
+let contactbtn = document.getElementById('contact');
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    // Simple validation (you can improve this)
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill out all fields.");
-        return;
-    }
-
-    // Form Submission Logic (replace this with server-side logic if needed)
-    const result = document.getElementById('result');
-    result.textContent = "Thank you, " + name + ". Your message has been sent!";
-    
-    // Reset the form
-    document.getElementById('contactForm').reset();
+contactbtn.addEventListener('click', function() {
+    contactbtn.request();
 });
 
 
 
 
-
-const form = document.getElementById('contact');
-const result = document.getElementById('result');
-
-form.addEventListener('submit', function(e) {
-e.preventDefault();
-const formData = new FormData(form);
-const object = Object.fromEntries(formData);
-const json = JSON.stringify(object);
-result.innerHTML = "Please wait..."
-
-fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: json
-    })
-    .then(async (response) => {
-        let json = await response.json();
-        if (response.status == 200) {
-            result.innerHTML = "Form submitted successfully";
-        } else {
-            console.log(response);
-            result.innerHTML = json.message;
-        }
-    })
-    .catch(error => {
-        console.log(error);
-        result.innerHTML = "Something went wrong!";
-    })
-    .then(function() {
-        form.reset();
-        setTimeout(() => {
-            result.style.display = "none";
-        }, 3000);
-    });
-});
 
 
