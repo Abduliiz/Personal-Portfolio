@@ -109,14 +109,74 @@ section {
     }
 }
 
-.home-content h3 {
+/* .home-content h3 {
+
     font-size: 3.2rem;
     font-weight: 700;
+} */
+.drop-down-text {
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .drop-down-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: dropDown 0.5s forwards;
+    animation-delay: calc(0.1s * var(--i));
+  }
+  
+  .drop-down-text span:nth-child(1) { --i: 0; }
+  .drop-down-text span:nth-child(2) { --i: 1; }
+  .drop-down-text span:nth-child(3) { --i: 2; }
+  .drop-down-text span:nth-child(4) { --i: 3; }
+  .drop-down-text span:nth-child(5) { --i: 4; }
+  .drop-down-text span:nth-child(6) { --i: 5; }
+  .drop-down-text span:nth-child(7) { --i: 6; }
+  .drop-down-text span:nth-child(8) { --i: 7; }
+  .drop-down-text span:nth-child(9) { --i: 8; }
+  .drop-down-text span:nth-child(10) { --i: 9; }
+  .drop-down-text span:nth-child(11) { --i: 10; }
+  .drop-down-text span:nth-child(12) { --i: 11; }
+  .drop-down-text span:nth-child(13) { --i: 12; }
+  .drop-down-text span:nth-child(14) { --i: 13; }
+  .drop-down-text span:nth-child(15) { --i: 14; }
+  .drop-down-text span:nth-child(16) { --i: 15; }
+  .drop-down-text span:nth-child(17) { --i: 16; }
+  .drop-down-text span:nth-child(18) { --i: 17; }
+  .drop-down-text span:nth-child(19) { --i: 18; }
+  .drop-down-text span:nth-child(20) { --i: 19; }
+  .drop-down-text span:nth-child(21) { --i: 20; }
+  .drop-down-text span:nth-child(22) { --i: 21; }
+  .drop-down-text span:nth-child(23) { --i: 22; }
+  .drop-down-text span:nth-child(24) { --i: 23; }
+  .drop-down-text span:nth-child(25) { --i: 24; }
+  .drop-down-text span:nth-child(26) { --i: 25; }
+  .drop-down-text span:nth-child(27) { --i: 26; }
+  .drop-down-text span:nth-child(28) { --i: 27; }
+  .drop-down-text span:nth-child(29) { --i: 28; }
+  .drop-down-text span:nth-child(30) { --i: 29; }
+  .drop-down-text span:nth-child(31) { --i: 30; }
+  .drop-down-text span:nth-child(32) { --i: 31; }
+  .drop-down-text span:nth-child(33) { --i: 32; }
+  .drop-down-text span:nth-child(34) { --i: 1; }
+  
+  @keyframes dropDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
 }
 
-.home-content h3:nth-last-of-type(2) {
+/* .home-content h3:nth-last-of-type(2) {
     margin: 2rem;
-}
+} */
 
 span {
     color: var(--main-color);
