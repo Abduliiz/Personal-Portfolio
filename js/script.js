@@ -75,6 +75,23 @@ contactbtn.addEventListener('click', function() {
     contactbtn.request();
 });
 
+function toggleReadMore(textId, btn) {
+    var moreText = document.getElementById(textId);
+    console.log("Before toggle:", moreText.style.display); // Log current state
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";  // Show the hidden content
+        btn.textContent = "Read Less";      // Change button text
+    } else {
+        moreText.style.display = "none";    // Hide the content
+        btn.textContent = "Read More";      // Change button text
+
+    }
+    console.log("After toggle:", moreText.style.display); // Log current state
+
+}
+
+
+
 
 
 
