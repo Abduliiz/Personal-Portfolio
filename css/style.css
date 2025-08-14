@@ -485,6 +485,116 @@ span2 {
     color: var(--second-bg-color);
 }
 
+/* Experience Section Styles */
+.experience {
+    background: var(--second-bg-color);
+}
+
+.experience h2 {
+    margin-bottom: 5rem;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.experience-box {
+    background: var(--bg-color);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--bg-color);
+    transition: .5s ease;
+}
+
+.experience-box:hover {
+    box-shadow: 0 .1rem 2rem var(--main-color);
+    transform: translateY(-.5rem);
+}
+
+.experience-info h4 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: .5rem;
+}
+
+.experience-info h5 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.experience-info .date {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.experience-details p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Achievements Section Styles */
+.achievements {
+    background: var(--bg-color);
+}
+
+.achievements h2 {
+    margin-bottom: 5rem;
+}
+
+.achievements-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.achievement-box {
+    display: flex;
+    align-items: flex-start;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--bg-color);
+    transition: .5s ease;
+}
+
+.achievement-box:hover {
+    box-shadow: 0 .1rem 2rem var(--main-color);
+    transform: translateY(-.5rem);
+}
+
+.achievement-icon {
+    margin-right: 2rem;
+    font-size: 4rem;
+    color: var(--main-color);
+    min-width: 6rem;
+}
+
+.achievement-content h3 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: .5rem;
+}
+
+.achievement-content h4 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.achievement-content p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
 
 @media (max-width: 1200px) {
     html {
@@ -587,12 +697,34 @@ span2 {
     .portfolio-container {
         grid-template-columns: repeat(2,1fr);
     }
+
+    .achievement-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .achievement-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
 }
 
 
 @media (max-width: 617px) {
     .portfolio-container {
         grid-template-columns: 1fr;
+    }
+
+    .experience-details p {
+        font-size: 1.4rem;
+    }
+
+    .achievement-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .achievement-content h4 {
+        font-size: 1.6rem;
     }
 }
 

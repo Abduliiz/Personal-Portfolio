@@ -51,7 +51,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .projects-container, .portfolio-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .projects-container, .portfolio-box, .contact form, .experience-container, .achievements-container', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
@@ -60,7 +60,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 /*==================== typed js ====================*/
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Software Engineer', 'Fullstack Developer', 'Game Designer'],
+    strings: ['Software Engineer', 'Data Scientist', 'Mobile App Developer', 'AI Specialist'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
